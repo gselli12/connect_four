@@ -1,5 +1,5 @@
 body {
-    background-image: url(background.png);
+    background-image: url(Images/background.png);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -102,19 +102,19 @@ body {
 }
 
 .white {
-    background-image: url(muscle.PNG);
+    background-image: url(Images/muscle.PNG);
     background-size: contain;
 }
 
 .red {
-    background-image: url(arnold.PNG);
+    background-image: url(Images/arnold.PNG);
     background-size: contain;
 
 }
 
 .yellow {
     background-color: yellow;
-    background-image: url(sylvester.PNG);
+    background-image: url(Images/sylvester.PNG);
     background-size: cover;
     background-blend-mode: normal;
 }

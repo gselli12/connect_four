@@ -3,18 +3,18 @@ var winner = null;
 var html = "";
 var gif = "";
 var turn = "Arnold, your move";
-var audioArnoldWin = new Audio ("Hasta la vista.m4a");
+var audioArnoldWin = new Audio ("Soundfiles/Hasta la vista.m4a");
 function playArnoldMove() {
-    var sounds = ["Bullshit.m4a", "Change.m4a", "Chopper.m4a", "Cookie.m4a", "Kill you last.m4a", "Quireboy.m4a", "Room for my fist.m4a", "Who is your daddy.m4a"];
+    var sounds = ["Soundfiles/Bullshit.m4a", "Soundfiles/Change.m4a", "Soundfiles/Chopper.m4a", "Soundfiles/Cookie.m4a", "Soundfiles/Kill you last.m4a", "Soundfiles/Quireboy.m4a", "Soundfiles/Room for my fist.m4a", "Soundfiles/Who is your daddy.m4a"];
     var index = Math.floor(Math.random() * (sounds.length));
     $(".sound").html("<embed src=\"" + sounds[index] + "\" hidden=\"true\" autostart=\"true\" />");
 }
 function playSylvesterMove() {
-    var sounds = ["DiseaseCureSS.m4a", "DistractionSS.m4a", "I am the Law SS.m4a", "Take your lifeSS.m4a"];
+    var sounds = ["Soundfiles/DiseaseCureSS.m4a", "Soundfiles/DistractionSS.m4a", "Soundfiles/I am the Law SS.m4a", "Soundfiles/Take your lifeSS.m4a"];
     var index = Math.floor(Math.random() * (sounds.length));
     $(".sound").html("<embed src=\"" + sounds[index] + "\" hidden=\"true\" autostart=\"true\" />");
 }
-var audioSylvesterWin = new Audio ("Life for nothing SS.m4a");
+var audioSylvesterWin = new Audio ("Soundfiles/Life for nothing SS.m4a");
 
 //initiate event handler on click
 $(".column").on("click", function() {
@@ -28,7 +28,7 @@ $(".column").on("click", function() {
             //IF PLAYER 1
             if (curPlayer== "player1") {
                 //loop through all children of the column that was being clicked on
-                for (i = 0; i < $(this).children().length ; i++) {
+                for (let i = 0; i < $(this).children().length ; i++) {
                     //remove class "white" from first element you find & add "red"! Break after that
                     if($(this).children().eq(i).hasClass("white")) {
                         $(this).children().eq(i).removeClass("white");
@@ -42,7 +42,7 @@ $(".column").on("click", function() {
 
             //IF PLAYER 2
             else {
-                for (i = 0; i < $(this).children().length; i++) {
+                for (let i = 0; i < $(this).children().length; i++) {
                     if($(this).children().eq(i).hasClass("white")) {
                         $(this).children().eq(i).removeClass("white");
                         $(this).children().eq(i).addClass("yellow");
@@ -58,7 +58,7 @@ $(".column").on("click", function() {
         //COLUMNS
         //loop through column that was currently clicked on
         var checkWinnerC = "";
-        for (i = 0; i < $(this).children().length; i++) {
+        for (let i = 0; i < $(this).children().length; i++) {
             //add colors contained in this column to variable checkWinner
             if ($(this).children().eq(i).hasClass("red")) {
                 checkWinnerC += "r";
@@ -82,7 +82,7 @@ $(".column").on("click", function() {
         var row;
         var checkWinnerR = "";
         //loop through column that was currently clicked on
-        for (i = 0; i < $(".game").children().length; i ++) {
+        for (let i = 0; i < $(".game").children().length; i ++) {
             //add colors contained in this column to variable checkWinner
             if ($(".game").children().eq(i).children().eq(row).hasClass("red")){
                 checkWinnerR += "r";
@@ -103,8 +103,8 @@ $(".column").on("click", function() {
         }
 
         //DIAGONALS
-        for (i = 0; i < $(".game").children().length; i++) {
-            for (j = 0; j < $(".game").children().eq(i).children().length; j++) {
+        for (let i = 0; i < $(".game").children().length; i++) {
+            for (let j = 0; j < $(".game").children().eq(i).children().length; j++) {
                 if ($(".game").children().eq(j).children().eq(i).hasClass("red") && $(".game").children().eq(j +1).children().eq(i+1).hasClass("red") && $(".game").children().eq(j+2).children().eq(i+2).hasClass("red") && $(".game").children().eq(j+3).children().eq(i+3).hasClass("red")) {
                     winner = "red";
                 }
