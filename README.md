@@ -2,4 +2,4 @@ A Connect Four Game that anwers the question we have all been asking ourselves: 
 
 Numerous animations (like randlomly generated sounds after each move, or GIFs on a win) make this game the perfect pasttime for a rainy sunday afternoon.
 
-![connectFour](https://github.com/gselli12/connect_four/blob/master/connect_four/Images/gifForReadme.gif)
+![Connect Four](https://github.com/gselli12/connect_four/blob/master/connect_four/Images/picForReadme.PNG)
