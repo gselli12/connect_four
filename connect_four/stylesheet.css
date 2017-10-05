@@ -1,0 +1,137 @@
+body {
+    background-image: url(background.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+* {
+    font-family: "Courier"
+}
+
+.pop-up {
+    position: relative;
+    top: 50px;
+    height: 150px;
+    width: 405px;
+    background-color: green;
+    z-index: 10;
+    opacity: 0.9;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border-style: dotted;
+    border-width: 7px;
+}
+
+.turn {
+    position: relative;
+    top: 60px;
+    height: 40px;
+    width: 260px;
+    background-color: green;
+    z-index: 10;
+    opacity: 0.9;
+    text-align: center;
+    border-radius: 10px;
+    border-style: dotted;
+    border-width: 7px;
+    font-weight: bold;
+}
+
+.menu {
+    position: relative;
+    top: 100px;
+    margin-top: 35px;
+    height: 150px;
+    width: 405px;
+    background-color: green;
+    z-index: 2;
+    opacity: 0.9;
+    text-align: center;
+    display: none;
+    border-radius: 10px;
+    border-style: dotted;
+    border-width: 7px;
+    box-shadow: 28px 25px 51px 7px rgba(0,0,0,0.75);
+}
+
+.heading {
+    opacity: 0.9;
+    font-weight: bold;
+    animation: blinker 0.5s linear infinite;
+}
+
+.paragraph {
+    animation: blinker 0.5s linear infinite;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.game {
+    position: absolute;
+    top: 300px;
+    height: 600px;
+    width: 727px;
+    background-color: blue;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    box-shadow: 28px 25px 51px 7px rgba(0,0,0,0.75);
+}
+
+.column {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.slot {
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    margin: 12px;
+}
+
+.white {
+    background-image: url(muscle.PNG);
+    background-size: contain;
+}
+
+.red {
+    background-image: url(arnold.PNG);
+    background-size: contain;
+
+}
+
+.yellow {
+    background-color: yellow;
+    background-image: url(sylvester.PNG);
+    background-size: cover;
+    background-blend-mode: normal;
+}
+
+.win {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    display: none;
+    top: 150px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border-color: black;
+    border-style: dotted;
+}
